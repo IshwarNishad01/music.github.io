@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music | Webiste</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="/pics/logo.jpg" alt="logo" id="logo" />
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Songs</a></li>
+                <li><a href="#">Caller Tune</a></li>
+                <li><a href="#">Favouirts</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+        <div class="conetent">
+            <div class="left-col">
+                <h1>
+                    THE <br />
+                    REAL <br />
+                    SOUND
+                </h1>
+            </div>
+            <div class="right-col">
+                <p>click here to listen</p>
+                <img src="/pics/play.png" id="icon" />
+            </div>
+        </div>
+        <div class="my">
+            <img src="/pics/my-logo.jpg" alt="">
+            <!-- <h3 id="me">I$hwar</h3> -->
+    </div>
+    </div>
+    <audio id="mySong">
+        <source src="/music/_Chan_Kitthan_Song__Ayushmann__Pranitha__Bhushan_Kumar__Rochak__Kumaar(128k).mp3"
+            type="audio/mp3" />
+    </audio>
+</body>
+<script>
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
+    icon.onclick = function() {
+        if(mySong.paused){
+            mySong.play();
+            icon.src ="/pics/pause.png";
+        }
+        else{
+            mySong.pause()
+            icon.src ="/pics/play.png";
+        }
+    }
+</script>
+</html>
